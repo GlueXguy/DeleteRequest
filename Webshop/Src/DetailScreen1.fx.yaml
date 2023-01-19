@@ -34,7 +34,7 @@
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(DataSourceInfo([@Abt_IT], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(DataSourceInfo([@Abt_Webshop], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Edit
         OnSelect: =EditForm(EditForm1);Navigate(EditScreen1, ScreenTransition.None)
@@ -55,10 +55,10 @@
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Abt_IT], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Abt_Webshop], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
-        OnSelect: =Remove([@Abt_IT], BrowseGallery1.Selected); If (IsEmpty(Errors([@Abt_IT], BrowseGallery1.Selected)), Back())
+        OnSelect: =Remove([@Abt_Webshop], BrowseGallery1.Selected); If (IsEmpty(Errors([@Abt_Webshop], BrowseGallery1.Selected)), Back())
         PaddingBottom: =24
         PaddingLeft: =24
         PaddingRight: =24
@@ -76,7 +76,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =88
         Size: =27
-        Text: ="Abt_IT"
+        Text: ="Abt_Webshop"
         Width: =Parent.Width - Self.X - IconDelete1.Width - IconEdit1.Width
         Wrap: =false
         X: =80
@@ -84,7 +84,7 @@
 
     DetailForm1 As formViewer:
         BorderColor: =RGBA(131, 24, 75, 1)
-        DataSource: =[@Abt_IT]
+        DataSource: =[@Abt_Webshop]
         Height: =Parent.Height - DetailForm1.Y
         Item: =BrowseGallery1.Selected
         Width: =Parent.Width
@@ -122,7 +122,7 @@
             DataField: ="RequestNr"
             Default: =ThisItem.RequestNr
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"RequestNr")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"RequestNr")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -166,7 +166,7 @@
             DataField: ="Date"
             Default: =ThisItem.CreationDate
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Date")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Date")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -210,7 +210,7 @@
             DataField: ="Date_x0020_of_x0020_receipt_x002"
             Default: =ThisItem.DateofNotification
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Date_x0020_of_x0020_receipt_x002")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Date_x0020_of_x0020_receipt_x002")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -278,7 +278,7 @@
             DataField: ="Salutation"
             Default: =ThisItem.Salutation
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Salutation")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Salutation")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -322,7 +322,7 @@
             DataField: ="Name"
             Default: =ThisItem.firstname
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Name")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Name")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -366,7 +366,7 @@
             DataField: ="surname"
             Default: =ThisItem.surname
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"surname")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"surname")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =true
@@ -410,7 +410,7 @@
             DataField: ="e_x002d_mail"
             Default: =ThisItem.'e-mail'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"e_x002d_mail")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"e_x002d_mail")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -454,7 +454,7 @@
             DataField: ="e_x002d_mailrotho"
             Default: =ThisItem.'e-mailrotho'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"e_x002d_mailrotho")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"e_x002d_mailrotho")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -498,7 +498,7 @@
             DataField: ="Other"
             Default: =ThisItem.Other
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Other")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Other")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =40
             Required: =false
@@ -566,7 +566,7 @@
             DataField: ="Processing_x0020_started"
             Default: =ThisItem.'Processing started'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Processing_x0020_started")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Processing_x0020_started")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -612,7 +612,7 @@
             DataField: ="Data_x0020_found"
             Default: =ThisItem.'Data found'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Data_x0020_found")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Data_x0020_found")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -657,7 +657,7 @@
             DataField: ="Request_x0020_executed"
             Default: =ThisItem.'Request executed'
             DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Request_x0020_executed")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Request_x0020_executed")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
