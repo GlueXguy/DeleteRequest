@@ -1,0 +1,3 @@
+{
+  "AppFromDataMetaDataIdsToEntityNameMappings": "{\"%DataSourceName.AFD%\":\"Abt_IT\",\"%DataSourceValue.AFD%\":\"[@Abt_IT]\",\"%SortFieldName.AFD%\":\"\\\"Title\\\"\",\"%SearchFieldName.AFD%\":\"\\\"reason\\\"\",\"%StartsWithFieldName.AFD%\":\"Title\",\"%DeleteConfirmFieldName.AFD%\":\"Title\",\"%SortDescending.AFD%\":\"SortDescending1\",\"%BrowseScreen.AFD%\":\"BrowseScreen1\",\"%DetailScreen.AFD%\":\"DetailScreen1\",\"%EditScreen.AFD%\":\"EditScreen1\",\"%BrowseContainer.ID%\":\"BrowseGallery1\",\"%DetailEditContainer.ID%\":\"EditForm1\"}"
+}
