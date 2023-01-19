@@ -348,9 +348,11 @@
                 Height: =225
                 Size: =21
                 Text: |-
-                    ="- in IT administrierten Systemen (Firewall, Outlook)
-                    - IP des Betroffenen
-                    - Email des Betroffenen "
+                    ="- IP des Betroffenen
+                    - sonstige Kundendaten
+                    - Newsletter
+                    - AppmyBox
+                    - sämtliche social Media Kanäle "
                 Width: =634
                 ZIndex: =1
 
