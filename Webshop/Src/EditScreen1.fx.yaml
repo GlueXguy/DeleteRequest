@@ -348,9 +348,13 @@
                 Height: =225
                 Size: =21
                 Text: |-
-                    ="- in IT administrierten Systemen (Firewall, Outlook)
-                    - IP des Betroffenen
-                    - Email des Betroffenen "
+                    ="- Name
+                    - User
+                    - Bestellhistorie
+                    - Anschrift
+                    - Kontaktdaten
+                    - Rechnungsdaten
+                    - sonstige Kundendaten "
                 Width: =634
                 ZIndex: =1
 
