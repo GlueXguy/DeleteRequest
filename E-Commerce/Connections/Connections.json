@@ -12,6 +12,13 @@
       "parameterHintsV2": {}
     },
     "datasets": {
+      "https://rothokunststoff.sharepoint.com/sites/DSGVODeletionrequest": {
+        "dataSources": {
+          "Abt_IT": {
+            "tableName": "a2d4bb33-5676-4308-9d21-6055dfc596cd"
+          }
+        }
+      },
       "https://rothokunststoff.sharepoint.com/sites/DSGVODeletionrequest/": {
         "dataSources": {
           "Abt_E-Commerce": {
@@ -21,6 +28,7 @@
       }
     },
     "dataSources": [
+      "Abt_IT",
       "Abt_E-Commerce"
     ],
     "dependencies": {},
