@@ -1,20 +1,19 @@
 "DetailScreen1 As screen.'phoneDetailViewLayout_ver3.0'":
-    Fill: =RGBA(255,255,255,1)
-    LoadingSpinnerColor: =RGBA(211, 66, 9, 1)
+    LoadingSpinnerColor: =RGBA(105, 121, 126, 1)
 
     RectQuickActionBar2 As rectangle:
-        BorderColor: =RGBA(131, 24, 75, 1)
-        Fill: =RGBA(211, 66, 9, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Fill: =RGBA(105, 121, 126, 1)
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
 
     IconBackarrow1 As icon.ChevronLeft:
         AccessibleLabel: =Self.Tooltip
-        BorderColor: =RGBA(131, 24, 75, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
         Height: =88
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate(BrowseScreen1, ScreenTransition.None)
@@ -22,7 +21,7 @@
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
-        PressedFill: =RGBA(255, 255, 255, 0.3)
+        PressedFill: =RGBA(0, 0, 0, 0)
         TabIndex: =0
         Tooltip: ="Back to list"
         Width: =88
@@ -30,10 +29,10 @@
 
     IconEdit1 As icon.Edit:
         AccessibleLabel: =Self.Tooltip
-        BorderColor: =RGBA(131, 24, 75, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
         DisplayMode: =If(DataSourceInfo([@Abt_Webshop], DataSourceInfo.EditPermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Edit
@@ -42,7 +41,7 @@
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
-        PressedFill: =RGBA(255, 255, 255, 0.3)
+        PressedFill: =RGBA(0, 0, 0, 0)
         TabIndex: =0
         Tooltip: ="Edit this item"
         Width: =88
@@ -51,10 +50,10 @@
 
     IconDelete1 As icon.Trash:
         AccessibleLabel: =Self.Tooltip
-        BorderColor: =RGBA(131, 24, 75, 1)
+        BorderColor: =RGBA(0, 0, 0, 0)
         Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
         DisplayMode: =If(!IsBlank(BrowseGallery1.Selected) && DataSourceInfo([@Abt_Webshop], DataSourceInfo.DeletePermission), DisplayMode.Edit, DisplayMode.Disabled)
         Height: =88
         Icon: =Icon.Trash
@@ -63,7 +62,7 @@
         PaddingLeft: =24
         PaddingRight: =24
         PaddingTop: =24
-        PressedFill: =RGBA(255, 255, 255, 0.3)
+        PressedFill: =RGBA(0, 0, 0, 0)
         TabIndex: =0
         Tooltip: ="Delete this item"
         Visible: =false
@@ -74,6 +73,7 @@
     LblAppName2 As label:
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
         Height: =88
         Size: =27
         Text: ="Abt_Webshop"
@@ -83,7 +83,7 @@
         ZIndex: =5
 
     DetailForm1 As formViewer:
-        BorderColor: =RGBA(131, 24, 75, 1)
+        BorderColor: =RGBA(166, 166, 166, 1)
         DataSource: =[@Abt_Webshop]
         Height: =Parent.Height - DetailForm1.Y
         Item: =BrowseGallery1.Selected
@@ -92,7 +92,7 @@
         ZIndex: =6
 
         DataCard3 As typedDataCard.blankCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(0, 0, 0, 0)
@@ -104,9 +104,14 @@
             ZIndex: =1
 
             Label3 As label:
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =70
                 Size: =21
@@ -117,7 +122,7 @@
                 ZIndex: =1
 
         RequestNr_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="RequestNr"
             Default: =ThisItem.RequestNr
@@ -133,9 +138,17 @@
 
             DataCardKey1 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -146,10 +159,15 @@
 
             DataCardValue1 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -161,7 +179,7 @@
                 ZIndex: =2
 
         CreationDate_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Date"
             Default: =ThisItem.CreationDate
@@ -177,9 +195,17 @@
 
             DataCardKey2 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -190,10 +216,15 @@
 
             DataCardValue2 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -205,7 +236,7 @@
                 ZIndex: =2
 
         DateofNotification_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Date_x0020_of_x0020_receipt_x002"
             Default: =ThisItem.DateofNotification
@@ -221,9 +252,17 @@
 
             DataCardKey3 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -234,10 +273,15 @@
 
             DataCardValue3 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -249,7 +293,7 @@
                 ZIndex: =2
 
         DataCard4 As typedDataCard.blankCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.View
             Fill: =RGBA(0, 0, 0, 0)
@@ -260,9 +304,14 @@
             ZIndex: =1
 
             Label4 As label:
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =70
                 Size: =21
@@ -273,7 +322,7 @@
                 ZIndex: =1
 
         Salutation_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Salutation"
             Default: =ThisItem.Salutation
@@ -289,9 +338,17 @@
 
             DataCardKey6 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -302,10 +359,15 @@
 
             DataCardValue6 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -317,7 +379,7 @@
                 ZIndex: =2
 
         firstname_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Name"
             Default: =ThisItem.firstname
@@ -333,9 +395,17 @@
 
             DataCardKey7 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -346,10 +416,15 @@
 
             DataCardValue7 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -361,7 +436,7 @@
                 ZIndex: =2
 
         surname_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="surname"
             Default: =ThisItem.surname
@@ -377,9 +452,17 @@
 
             DataCardKey8 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -390,10 +473,15 @@
 
             DataCardValue8 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -405,7 +493,7 @@
                 ZIndex: =2
 
         "'e-mail_DataCard1' As typedDataCard.textualViewCard":
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="e_x002d_mail"
             Default: =ThisItem.'e-mail'
@@ -421,9 +509,17 @@
 
             DataCardKey18 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -434,10 +530,15 @@
 
             DataCardValue18 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -449,7 +550,7 @@
                 ZIndex: =2
 
         "'e-mailrotho_DataCard1' As typedDataCard.textualViewCard":
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="e_x002d_mailrotho"
             Default: =ThisItem.'e-mailrotho'
@@ -465,9 +566,17 @@
 
             DataCardKey19 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -478,10 +587,15 @@
 
             DataCardValue19 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -493,7 +607,7 @@
                 ZIndex: =2
 
         Other_DataCard1 As typedDataCard.textualViewCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Other"
             Default: =ThisItem.Other
@@ -509,9 +623,17 @@
 
             DataCardKey24 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -522,10 +644,15 @@
 
             DataCardValue24 As label:
                 AutoHeight: =true
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
@@ -537,7 +664,7 @@
                 ZIndex: =2
 
         DataCard5 As typedDataCard.blankCard:
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
@@ -548,9 +675,14 @@
             ZIndex: =1
 
             Label5 As label:
-                BorderColor: =RGBA(131, 24, 75, 1)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Bold
                 Height: =70
                 Size: =21
@@ -561,7 +693,7 @@
                 ZIndex: =1
 
         "'Processing started_DataCard1' As typedDataCard.toggleViewCard":
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Processing_x0020_started"
             Default: =ThisItem.'Processing started'
@@ -578,9 +710,17 @@
 
             DataCardKey31 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -591,15 +731,23 @@
 
             DataCardValue31 As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
                 Default: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisplayMode: =Parent.DisplayMode
                 FalseFill: =RGBA(255, 0, 0, 1)
+                FalseHoverFill: =RGBA(33, 33, 33, 1)
                 FalseText: ="no"
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 HandleFill: =RGBA(255, 255, 255, 1)
                 Height: =49
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =21
                 TrueFill: =RGBA(54, 176, 75, 1)
+                TrueHoverFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 TrueText: ="yes"
                 Width: =154
                 X: =30
@@ -607,7 +755,7 @@
                 ZIndex: =2
 
         "'Data found_DataCard1' As typedDataCard.toggleViewCard":
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Data_x0020_found"
             Default: =ThisItem.'Data found'
@@ -623,9 +771,17 @@
 
             DataCardKey32 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -636,15 +792,23 @@
 
             DataCardValue32 As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
                 Default: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisplayMode: =Parent.DisplayMode
                 FalseFill: =RGBA(255, 0, 0, 1)
+                FalseHoverFill: =RGBA(33, 33, 33, 1)
                 FalseText: ="no"
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 HandleFill: =RGBA(255, 255, 255, 1)
                 Height: =49
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =21
                 TrueFill: =RGBA(54, 176, 75, 1)
+                TrueHoverFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 TrueText: ="yes"
                 Width: =154
                 X: =30
@@ -652,7 +816,7 @@
                 ZIndex: =2
 
         "'Request executed_DataCard4' As typedDataCard.toggleViewCard":
-            BorderColor: =RGBA(131, 24, 75, 1)
+            BorderColor: =RGBA(166, 166, 166, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Request_x0020_executed"
             Default: =ThisItem.'Request executed'
@@ -668,9 +832,17 @@
 
             DataCardKey20 As label:
                 AutoHeight: =true
-                Color: =RGBA(131, 24, 75, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
                 Height: =48
+                PaddingLeft: =0
                 Size: =21
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -681,14 +853,22 @@
 
             DataCardValue20 As toggleSwitch:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Color: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
                 Default: =Parent.Default
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisplayMode: =Parent.DisplayMode
-                FalseFill: =RGBA(128, 130, 133, 1)
+                FalseFill: =RGBA(102, 102, 102, 1)
+                FalseHoverFill: =RGBA(33, 33, 33, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
                 HandleFill: =RGBA(255, 255, 255, 1)
                 Height: =49
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
                 Size: =21
-                TrueFill: =RGBA(211, 66, 9, 1)
+                TrueFill: =RGBA(105, 121, 126, 1)
+                TrueHoverFill: =ColorFade(RGBA(105, 121, 126, 1), -30%)
                 Width: =154
                 X: =30
                 Y: =DataCardKey20.Y + DataCardKey20.Height + 5
