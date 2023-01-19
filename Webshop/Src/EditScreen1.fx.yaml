@@ -54,7 +54,7 @@
         Fill: =RGBA(58, 58, 58, 0)
         Height: =88
         Size: =27
-        Text: ="Abt_IT"
+        Text: ="Abt_Webshop"
         Width: =Parent.Width - IconCancel1.Width - IconAccept1.Width
         Wrap: =false
         X: =80
@@ -62,7 +62,7 @@
 
     EditForm1 As form:
         BorderColor: =RGBA(131, 24, 75, 1)
-        DataSource: =[@Abt_IT]
+        DataSource: =[@Abt_Webshop]
         Height: =Parent.Height - EditForm1.Y
         Item: =BrowseGallery1.Selected
         OnSuccess: =Back()
@@ -76,7 +76,7 @@
             DataField: ="Data_x0020_found"
             Default: =ThisItem.'Data found'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Data_x0020_found")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Data_x0020_found")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -155,7 +155,7 @@
             DataField: ="Processing_x0020_started"
             Default: =ThisItem.'Processing started'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Processing_x0020_started")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Processing_x0020_started")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
@@ -234,7 +234,7 @@
             DataField: ="Request_x0020_executed"
             Default: =ThisItem.'Request executed'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Abt_IT],DataSourceInfo.DisplayName,"Request_x0020_executed")
+            DisplayName: =DataSourceInfo([@Abt_Webshop],DataSourceInfo.DisplayName,"Request_x0020_executed")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
