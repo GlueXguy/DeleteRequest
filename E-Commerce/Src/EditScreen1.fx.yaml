@@ -155,7 +155,10 @@
             DataField: ="Processing_x0020_started"
             Default: =ThisItem.'Processing started'
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Abt_E-Commerce],DataSourceInfo.DisplayName,"Processing_x0020_started")
+            DisplayName: |-
+                =DataSourceInfo([@Abt_E-Commerce],DataSourceInfo.DisplayName,"Processing_x0020_started")
+                
+                DataSourceInfo([@'Abt_E-Commerce']
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
