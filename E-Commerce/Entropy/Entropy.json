@@ -96,7 +96,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/19/2023 13:31:09",
+  "HeaderLastSavedDateTimeUTC": "01/19/2023 13:31:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "915074bc-a178-4a85-acb1-e5b25e416674": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/shared-sharepointonl-5196fc67-f2ce-413d-afa5-23b1f5321714\""
@@ -107,6 +107,7 @@
   "OrderComponentMetadata": {},
   "OrderComponentTemplate": {},
   "OrderDataSource": {
+    "Abt_E-Commerce": 4,
     "Abt_IT": 0,
     "ComboBoxSample": 2,
     "CustomGallerySample": 1,
@@ -279,7 +280,7 @@
     "IconBackarrow1": 16,
     "IconCancel1": 64,
     "IconDelete1": 18,
-    "IconEdit1": 19,
+    "IconEdit1": 17,
     "IconNewItem1": 4,
     "IconRefresh1": 2,
     "IconSortUpDown1": 3,
@@ -289,7 +290,7 @@
     "Label4": 33,
     "Label5": 53,
     "LblAppName1": 1,
-    "LblAppName2": 17,
+    "LblAppName2": 19,
     "LblAppName3": 66,
     "NextArrow1": 12,
     "Other_DataCard1": 49,
