@@ -1,0 +1,38 @@
+{
+  "915074bc-a178-4a85-acb1-e5b25e416674": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://rothokunststoff.sharepoint.com/sites/DSGVODeletionrequest": {
+        "dataSources": {
+          "Abt_IT": {
+            "tableName": "a2d4bb33-5676-4308-9d21-6055dfc596cd"
+          }
+        }
+      },
+      "https://rothokunststoff.sharepoint.com/sites/DSGVODeletionrequest/": {
+        "dataSources": {
+          "Abt_FIBU": {
+            "tableName": "9ad776cd-3244-4ce7-b6a9-3113b9c3ee32"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Abt_IT",
+      "Abt_FIBU"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "915074bc-a178-4a85-acb1-e5b25e416674"
+  }
+}
