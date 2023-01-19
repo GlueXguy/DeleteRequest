@@ -18,10 +18,18 @@
             "tableName": "a2d4bb33-5676-4308-9d21-6055dfc596cd"
           }
         }
+      },
+      "https://rothokunststoff.sharepoint.com/sites/DSGVODeletionrequest/": {
+        "dataSources": {
+          "Abt_Marketing": {
+            "tableName": "c8da1b33-01da-4b05-a66a-bb6087e142e9"
+          }
+        }
       }
     },
     "dataSources": [
-      "Abt_IT"
+      "Abt_IT",
+      "Abt_Marketing"
     ],
     "dependencies": {},
     "dependents": [],
